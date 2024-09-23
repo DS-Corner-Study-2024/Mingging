@@ -1,0 +1,26 @@
+호이스팅 
+스코프
+인수, 매개변수
+중괄호, 대괄호
+원시 자료형, 객체 자료형
+0
+keys
+
+#1
+function greet(name){
+    console.log(`안녕 내 닉네임은 ${name}야`);
+    return name;
+}
+
+#2
+function cul(돈) {
+            let count = [];
+            let denominations = [50000, 10000, 5000, 1000, 500, 100];
+
+            for (let i = 0; i < denominations.length; i++) {
+                count[i] = Math.floor(money / denominations[i]);
+                money -= denominations[i] * count[i];
+            }
+
+            console.log(`거스름돈은 50000원 지폐 ${count[0]}장, 10000원 지폐 ${count[1]}장, 5000원 지폐 ${count[2]}장, 1000원 지폐 ${count[3]}장, 500원 동전 ${count[4]}개, 100원 동전 ${count[5]}개입니다.`);
+        }
