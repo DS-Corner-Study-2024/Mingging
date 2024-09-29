@@ -21,6 +21,7 @@ function cul(돈) {
                 count[i] = Math.floor(money / denominations[i]);
                 money -= denominations[i] * count[i];
             }
+            
 
             console.log(`거스름돈은 50000원 지폐 ${count[0]}장, 10000원 지폐 ${count[1]}장, 5000원 지폐 ${count[2]}장, 1000원 지폐 ${count[3]}장, 500원 동전 ${count[4]}개, 100원 동전 ${count[5]}개입니다.`);
         }
