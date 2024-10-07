@@ -1,0 +1,46 @@
+1. 자바스크립트의 구동 환경을 (  )이라 한다.
+2. (  )는 Node.js에서 여러 개의 자바스크립트 파일을 실행하고 관리하는 일종의 관리 단위이다.
+3. (2번 정답)은 (  ) 폴더에서 생성해야한다.
+4. 복잡한 명령어를 간단한 명령어로 변경하는 일종의 매크로 기능을 사용하려면, package.json의 (  ) 항목을 수정하면 된다.
+5. 재사용할 수 있고 독립적으로 존재하는 프로그램의 일부를 (  )이라 합니다.
+6. (  )는 프로그램을 개발할 때 공통으로 사용할 수 있는 기능들을 모아 모듈화한 것으로, 완전한 프로그램은 아니며 특정 기능만을 수행한다.
+7. npm 서버로부터 라이브러리를 불러와 설치하는 명령어는 (  )이다.
+
+코드문제 1.
+const conEX = "상수 예시"; 
+
+function funcEX1() {
+  console.log("함수 예시1")
+}
+
+function funcEX2() {
+  console.log("함수 예시2")
+}
+
+다음 상수와 함수들을 내보내는 코드를 2가지 방식으로 작성하시오.
+
+2. 위에서 작성한 모듈 값을 불러오는 코드를 작성하시오.
+(파일 위치는 같은 폴더 안, 파일명 example.js)
+
+1. 자바스크립트 런타임
+2. 패키지
+3. 루트
+4. scripts
+5. 모듈
+6. 라이브러리
+7. npm i (라이브러리명)
+
+1. export { conEX, funcEX1, funcEX2};
+
+export const conEX = "상수 예시"; 
+
+export function funcEX1() {
+  console.log("함수 예시1")
+}
+
+export function funcEX2() {
+  console.log("함수 예시2")
+}
+
+2. import { conEX, funcEX1, funcEX2 } from "./example.js"
+import * from "./example.js"
