@@ -1,0 +1,67 @@
+1. 페이스북은 출시 초기부터 페이스북은 다른 웹 서비스 보다 유독 (상호작용)이 많았습니다.
+2. 리액트의 3가지 특징은 컴포넌트 기반의 (유연성), 쉽고 간단한 업데이트, 빠른 업데이트이다.
+3. (컴포넌트)는 리액트를 대표하는 중요 개념 중 하나인데, 이 개념에는 ‘페이지를 구성하는 요소’라는 의미가 포함되어 있습니다.
+4. 웹에서 페이지를 업데이트하려면 (문서 객체 모델)(Document Object Model, DOM)을 조작해야 합니다.
+5. (버추얼 돔)은 페인팅과 레이아웃을 여러 번 수행하지 않으려면 여러 번의 업데이트를 모았다가 업데이트가 필요할 때 한 번에 처리하여 효율적입니다.
+6. (Create React App)이라는 Node.js 라이브러리를 이용하여 복잡한 설정없이 리액트 앱을 만들 수 있습니다.
+7. 리액트 앱을 생성하기 위해 터미널에서 입력하는 명령어는 (npx create-react-app)이다.
+8. 리액트 앱을 실행하기 위해 터미널에서 입력하는 명령어는 (npm run start)이다.
+9. 리액트 앱을 종료하기 위해 터미널에서 입력하는 명령어는 (Ctrl+C)이다.
+10. (포트)는 컴퓨터에서 실행되고 있는 서버를 구분하는 번호입니다. 컴퓨터에는 기본적으로는 하나의 주소가 있는데, 이 주소로 요청을 받습니다. 
+
+1. 다음 헤더코드를 컨포넌트로 만드시오.
+<!DOCTYPE html>
+<html>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <h1>안녕하세요 react1팀입니다</h1>
+    </header>
+    <article>
+      <!-- 페이지별로 필요한 요소를 작성합니다 -->
+    </article>
+  </body>
+</html>
+
+function App() {
+  return (
+    <div className="App">
+      <header><h1>안녕하세요 react1팀입니다</h1></header>
+      <article>
+        <!-- 페이지별로 필요한 요소를 작성합니다 -->
+      </article>
+    </div>
+  );
+}
+export default App;
+
+
+코드2: 리액트앱에서 
+import logo from "./logo.svg";
+import "./App.css";
+
+function App() {
+  return (
+    <div className="App">
+      <h1>react학습하기</h1>
+      <h2>학습 열심히 하기</h2>
+    </div>
+  );
+}
+
+export default App;
+이 코드로 변경하여 실행하시오.
+
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
+reportWebVitals();
