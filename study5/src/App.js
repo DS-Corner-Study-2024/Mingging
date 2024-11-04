@@ -1,17 +1,16 @@
 import './App.css';
-
-const App = () => {
-  return (
-    <header>
-      <h1>Header</h1>
-    </header>
-  );
-}
+import Header from './component/Header';
+import Body from './component/Body';
 
 function App() {
+  const HeaderProps = {
+    name:"박민주",
+    stdnumber: 20230949,
+  }
   return (
     <div className="App">
-      <Header />
+      <Header {...HeaderProps}  />
+      <Body />
     </div>
   );
 }
