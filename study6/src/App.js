@@ -1,12 +1,27 @@
 import './App.css';
+import {useRef, useState} from "react";
 
 function App() {
-  function handleOnClick() {
-    alert("클릭하셨군요!");
+  const[text, setText] = useState("");
+  const textRef = useRef();
+
+  function textChange(e) {
+    setText(e.target.value);
   }
+
+  function handleOnClick() {
+    if (text.length < 7) {
+      textRef.current.focus();
+    } else {
+      alert(text);
+      setText("");
+    }
+  }
+
   return (
     <div className="App">
-      <button onClick={handleOnClick}>클릭하세요</button> 
+        <input ref={textRef} type="text" value={text} onChange={textChange}></input>
+        <button type="button" onClick={handleOnClick}>제출</button>
     </div>
   );
 }
