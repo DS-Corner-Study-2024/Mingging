@@ -1,0 +1,67 @@
+// 빈칸문제 
+1. (useState)는 가장 기본적인 Hook이며, 함수형 컴포넌트에서도 가변적인 상태를 지닐 수 있게 해 줍니다.
+2. (useEffect)는 클래스형 컴포넌트의 componentDidMount와 componentDidUpdate를 합친 형태로 보아도 무방합니다.
+3. (useReducer)는 현재 상태, 그리고 업데이트를 위해 필요한 정보를 담은 액션(action) 값을 전달받아 새로운 상태를 반환하는 함수입니다.
+4. (useMemo)를 사용하면 함수형 컴포넌트 내부에서 발생하는 연산을 최적화할 수 있습니다.
+5. (useCallback)을 사용하면 이벤트 핸들러 함수를 필요할 때만 생성할 수 있습니다.
+6. (useRef) Hook은 함수형 컴포넌트에서 ref를 쉽게 사용할 수 있도록 해 줍니다. 
+7. 리액트에서 Hooks 패턴을 사용하면 (Info) 컴포넌트를 작성하지 않고도 대부분의 기능을 구현할 수 있습니다.
+
+코드문제1
+import React, { useState } from 'react';
+ 
+const Counter = () => {
+  const [value, setValue] = useState(0);
+ 
+  return (
+    <div>
+      <p>
+        현재 카운터 값은 <b>{value}</b>입니다.
+      </p>
+      <button onClick={() => setValue(value + 1)}>+1</button>
+      <button onClick={() => setValue(value + 10)}>+10</button>
+      <button onClick={() => setValue(value + 100)}>+100</button>
+      <button onClick={() => setValue(value - 1)}>-1</button>
+      <button onClick={() => setValue(value - 10)}>-10</button>
+      <button onClick={() => setValue(value - 100)}>-100</button>
+    </div>
+  );
+};
+ 
+export default Counter;
+
+코드문제2
+import { useState, useEffect } from "react"
+
+function InputPInfo() {
+    const [stdID, setStdID] = useState('');
+    const [department, setDepartment] = useState('');
+    
+    useEffect(()=>{
+        console.log('렌더링됨');
+        
+    }, [stdID, department]);
+
+    const onChangeStdID = e => {
+        setStdID(e.target.value);
+    }
+    const onChangeDepartment = e => {
+        setDepartment(e.target.value);
+    }
+
+    return  (
+        <>
+            <form>
+                <label for="stdID">학번</label>
+                <input type="text" value={stdID} onChange={onChangeStdID}></input>
+                <label for="department">학과</label>
+                <input type="text" value={department} onChange={onChangeDepartment}></input>
+                {
+                    
+                }
+            </form>
+        </>
+    )
+}
+
+export default InputPInfo;
